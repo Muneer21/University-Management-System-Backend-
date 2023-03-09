@@ -1,8 +1,8 @@
 const { Sequelize, DataTypes, Model } = require("sequelize");
 let sequelize = require("../../common/dbConnection");
 
-class User extends Model {}
-User.init(
+class Student extends Model {}
+Student.init(
   {
     id: {
       primaryKey: true,
@@ -10,34 +10,16 @@ User.init(
       allowNull: false,
       type: DataTypes.INTEGER,
     },
-    firstName: {
+    regNo: {
+      unique:true,
       allowNull: false,
       type: DataTypes.STRING(),
     },
-    lastName: {
+    Department: {
       allowNull: false,
       type: DataTypes.STRING(),
     },
-    // role: {
-    //   allowNull: false,
-    //   type: DataTypes.STRING(),
-    // },
-    email: {
-      unique: true,
-      allowNull: false,
-      type: DataTypes.STRING(),
-    },
-    phoneNumber: {
-      unique: true,
-      allowNull: false,
-      type: DataTypes.STRING(),
-    },
-    password: {
-      allowNull: false,
-      type: DataTypes.STRING(),
-    },
-    userName: {
-      unique: true,
+    semester: {
       allowNull: false,
       type: DataTypes.STRING(),
     },
@@ -46,8 +28,8 @@ User.init(
     timesstamps: true,
     paranoid: true,
     sequelize: sequelize,
-    modelName: "User",
+    modelName: "Student",
   }
 );
 
-module.exports = User;
+module.exports = Student;
