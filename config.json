@@ -4,7 +4,10 @@
     "username": "postgres",
     "password": "123456",
     "logging": false,
-    "host": "localhost",
+    "host1": "localhost",
     "dialect": "postgres"
+  },
+  "jwt":{
+    "secret": "92496848378ca46ea12148420f56efc9f91929365c0fa15690f92aead096fdbf3f5ab68f8c7e66e91f4189a475dd440a766903aeddbe5e3afbb594ca990a0815"
   }
 }
